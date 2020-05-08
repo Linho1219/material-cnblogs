@@ -13,57 +13,68 @@
         content: 'Henrylin666';
     }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/JavaScript/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/JavaScript/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/JavaScript/"] {
     background: #ffd4d4;
     color: #c93501;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/HTML%2FCSS/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/HTML%2FCSS/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/HTML%2FCSS/"] {
     background: #ffe4b9;
     color: #c4580b;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/Stylus/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/Stylus/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/Stylus/"] {
     background: #bfedf7;
     color: #027C80;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/C%2B%2B/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/C%2B%2B/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/C%2B%2B/"] {
     background: #eacad1;
     color: #881421;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/Node.js/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/Node.js/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/Node.js/"] {
     background: #aee3ca;
     color: #185C37;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/Electron/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/Electron/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/Electron/"] {
     background: #cbd6ff;
     color: #005bd0;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/%E7%BB%BC%E5%90%88/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/%E7%BB%BC%E5%90%88/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/%E7%BB%BC%E5%90%88/"] {
     background: #b2ddff;
     color: #00599f;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/%E6%B2%B9%E7%8C%B4/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/%E6%B2%B9%E7%8C%B4/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/%E6%B2%B9%E7%8C%B4/"] {
     background: #e6e6e6;
     color: #616161;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/"] {
     background: #ead6ef;
     color: #58006d;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/%E8%BD%AF%E4%BB%B6%E4%BD%93%E9%AA%8C/"] {
     background: #9ee1eb;
     color: #00406d;
 }
 
-#EntryTag > a[href="https://www.cnblogs.com/henrylin/tag/Office/"] {
+#EntryTag a[href="https://www.cnblogs.com/henrylin/tag/Office/"],
+#taglist a[href="https://www.cnblogs.com/henrylin/tag/Office/"] {
     background: #fbcab7;
     color: #C11F23;
 }
@@ -1092,7 +1103,8 @@ p.date a {
     #post_detail h3,
     #post_detail h4,
     #post_detail h5,
-    .myposts_title {
+    .myposts_title,
+    #taglist_title {
         color: #fff !important;
         font-size: 32px;
     }
@@ -1102,7 +1114,8 @@ p.date a {
     #post_detail h4,
     #post_detail h5,
     #post_detail h6,
-    .myposts_title {
+    .myposts_title,
+    #taglist_title {
         font-size: 22px;
         background-color: #0078D7;
         color: #eee;
@@ -1111,6 +1124,16 @@ p.date a {
         box-shadow: rgba(0, 0, 0, .2) 0 5px 15px;
         margin-top: 25px;
         border: none;
+    }
+
+#taglist_title {
+    text-align: left;
+    font-size: 32px !important;
+    padding: 15px;
+}
+
+    #taglist_title small {
+        display: none;
     }
 
 .toc-container-header {
@@ -1314,7 +1337,8 @@ p.date a {
     font-size: 0;
 }
 
-    #EntryTag a[href] {
+    #EntryTag a[href],
+    #taglist a[href] {
         padding: 5px 10px;
         margin: 10px 20px 10px 0;
         -webkit-border-radius: 3px;
@@ -1327,11 +1351,13 @@ p.date a {
         box-shadow: rgba(0,0,0,.1) 0 5px 15px;
     }
 
-        #EntryTag a[href]:hover {
+        #EntryTag a[href]:hover,
+        #taglist a[href]:hover {
             box-shadow: rgba(0,0,0,.25) 0 10px 20px;
         }
 
-        #EntryTag a[href]:active {
+        #EntryTag a[href]:active,
+        #taglist a[href]:active {
             box-shadow: rgba(0,0,0,0) 0 0 0,rgba(0,0,0,.3) 0 5px 20px inset;
             -webkit-filter: brightness(97%);
             -moz-filter: brightness(97%);
@@ -1345,11 +1371,31 @@ p.date a {
             transition: all .1s;
         }
 
-    #EntryTag a:before,
-    #EntryTag a:after {
-        content: '#';
-        margin: 0px 2px;
-    }
+        #EntryTag a[href]:before,
+        #EntryTag a[href]:after,
+        #taglist a[href]:before,
+        #taglist a[href]:after {
+            content: '#';
+            margin: 0px 2px;
+        }
+
+#taglist tr {
+    height: 50px;
+}
+
+#taglist a[href] {
+    margin: 0;
+}
+
+#taglist tr * {
+    vertical-align: middle;
+}
+
+#taglist span {
+    color: #777;
+    margin: 5px;
+    text-shadow: rgba(0,0,0,.3) 0 5px 5px;
+}
 
 #blog_post_info_block {
     padding: 16px 8px;
