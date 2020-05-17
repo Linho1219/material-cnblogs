@@ -1,9 +1,15 @@
 ﻿<div id="loadingProcess"></div>
+<script>
+    var tit = document.querySelector('head title').innerHTML.replace(/Henrylin666 - 博客园/,"Henrylin 的小站");
+    document.querySelector('head title').innerHTML = tit;
+    var linkObject = document.createElement('link');
+    linkObject.rel = "shortcut icon";
+    linkObject.href = "https://pic.cnblogs.com/avatar/2010014/20200416172051.png";
+    document.getElementsByTagName("head")[0].appendChild(linkObject);
+</script>
 <script type="text/javascript" src="https://magi.com/assets/thirdparty/leader-line.min.js"></script>
-
 <script type="text/javascript">
     "use strict";
-
     !function () {
         function a() {//生成目录
             var t, a, e, n = $("#cnblogs_post_body>h2");
@@ -169,4 +175,45 @@
     if (old_edge > -1) {
         document.documentElement.className = "edge";
     }
+</script>
+<!--添加超链接悬浮缩略图卡片-->
+<script>
+	var links = document.querySelectorAll('#cnblogs_post_body a[href^="http"]');
+	var l, i;
+	var num=0;
+	for (i = 0, l = links.length; i < l; i++) {
+	    links[i].addEventListener('mouseover', function () {
+	        if (!this.getAttribute('cardshow')) {
+	            this.setAttribute('cardshow', 'true');
+	            var url = this.href;
+	            var box = document.createElement('div');
+	            var tit = this.innerHTML;
+	            var iframe = document.createElement('iframe');
+	            iframe.src = url;
+	            iframe.scrolling = 'no';
+	            iframe.sandbox = 'allow-scripts';
+	            iframe.height = '768px';
+	            iframe.width = '1024px';
+	            box.className = 'hover_card';
+	            num++;
+	            box.id = 'card_' + num;
+	            box.innerHTML += '<a href="' + url + '">' + tit + '</a><span>' + url + '</span>';
+	            box.style.height = '50px';
+	            this.parentNode.insertBefore(box, this);
+	            setTimeout(function () {
+	                box.appendChild(iframe);
+	                box.style.height = '';
+	            }, 300);
+	        }
+	    })
+	    links[i].onmouseout = function () {
+	        if (document.querySelector('div.hover_card')) {
+	            var box = document.querySelector('div#card_' + num);
+	            num--;
+	            this.removeAttribute('cardshow');
+	            box.style.opacity = '0';
+	            setTimeout(function () { box.parentNode.removeChild(box); }, 260);
+	        }
+	    }
+	}
 </script>

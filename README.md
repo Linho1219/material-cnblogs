@@ -1,8 +1,10 @@
-# Welcome to material-cnblogs，这是一个 Material 风博客园皮肤，可以直接套用。
+# Welcome to material-cnblogs，这是一个 Material 风博客园皮肤，可以便捷地套用。
 
-使用cnblogs-skin搭建，但是cnblogs-skin里面的HTML模板好像过时了。于是我制作之后又用Stylus大修大改了一番。
+使用cnblogs-skin搭建，但是cnblogs-skin里面的HTML模板好像过时了。于是我制作之后又大修大改了一番。
 
 内含 `css.css`、`header.html`、`footer.html` 三个文件，分别对应博客园后台“设置”选项卡下的“页面定制 CSS 代码”、“页首 HTML 代码”和“页脚 HTML 代码”。
+
+主题色：#0078D7。
 
 **可以前往 [我的个人博客](https://www.cnblogs.com/henrylin/) 查看显示效果。**
 
@@ -14,7 +16,9 @@
 - 图片点击放大；
 - 页面加载进度条（其实是心理安慰）；
 - 漂亮的超链接样式；
-- 在文章的任意部分套上 `<div class="no-select">` 和 `</div>` 可以防止这部分内容被复制；
+- 在文章的任意部分套上 `<div class="no-select">` 和 `</div>` 可以防止这部分内容被无脑复制；
+- 鼠标悬浮在文章内超链接（不包括书签超链接）上时，显示该链接的 URL 和该页面的缩略图；
+- 自动预加载，提高全站访问速度；
 - 友链模板（在 `footer.html` 里面）。
 
 ## 使用
@@ -23,6 +27,6 @@
 2. 打开 [博客园后台管理设置](https://i.cnblogs.com/settings)；
 3. 将 `css.css` 中的内容复制到“页面定制 CSS 代码”框里面，同理，`header.html` → “页首 HTML 代码”，`footer.html` → “页脚 HTML 代码”；
 4. 把“标题”框里面的东西删掉（因为已经在 CSS 中定义了）；
-5. 把“博客皮肤”改成默认的“AnotherEon”， **不要** 勾选“禁用模板默认CSS”。
+5. 把“博客皮肤”改成默认的“AnotherEon”，**不要**勾选“禁用模板默认CSS”。
 6. **保存；**
 7. 顺便 Star 一下这个仓库。
